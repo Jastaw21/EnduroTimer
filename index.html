@@ -1266,8 +1266,8 @@ function getElapsed(bib, sid) {
   if (!st)  return null;
   const fin = Object.values(td.finishes).find(f => f.assigned && String(f.bib) === String(bib));
   if (!fin) return null;
-  const sT  = st.wasOffline  ? st.deviceTime  : (st.serverTime  || st.deviceTime);
-  const fT  = fin.wasOffline ? fin.deviceTime : (fin.serverTime || fin.deviceTime);
+  const sT  = st.deviceTime;
+  const fT  = fin.deviceTime;
   return { ms: fT-sT, offline: st.wasOffline || fin.wasOffline };
 }
 
