@@ -1,3 +1,4 @@
+// Service Bump
 const CACHE = 'endurotimer-v3';
 const PRECACHE = [
   '/',
